@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <a href="./index.html">
+    <header class="header">
+      <a class="header-logo" href="./index.html">
         <img src="./images/logo.png" alt="Логотип" />
       </a>
       <nav>
@@ -25,19 +32,25 @@
     </header>
     <main>
       <!-- Hero -->
-      <section>
-        <ul>
-          <li><a href="" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+      <section class="hero">
+        <ul class="hero-list">
+          <li>
+            <a href="" class="hero-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </li>
+          <li>
+            <a href="" class="hero-link" target="_blank" rel="noopener noreferrer">Youtube</a>
+          </li>
         </ul>
 
-        <p lang="en">A hair salon for men in Kyiv</p>
-        <h1 lang="en">BarberShop</h1>
-        <p>Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
+        <p lang="en" class="hero-top-text">A hair salon for men in Kyiv</p>
+        <h1 lang="en" class="hero-title">BarberShop</h1>
+        <p class="hero-botton-text">
+          Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+        </p>
       </section>
 
       <!-- About us -->
-      <section id="about">
+      <section class="" id="about">
         <ul>
           <li>
             <img src="./images/img-about1.jpeg" alt="Барбер бреет шею" width="270" height="445" />

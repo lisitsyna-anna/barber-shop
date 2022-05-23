@@ -4,13 +4,44 @@
   --second-color-title: #303030;
   --main-color-btn: #ffffff;
   --second-color-btn: #303030;
+  --tipycal-margin: 20px;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
 .list {
+  margin: 0;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -65,7 +96,9 @@ body {
 
 /* ----------------------------------HEADER---------------------------------- */
 .header {
-  background-color: grey;
+  background-color: #303030;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link,
@@ -92,6 +125,7 @@ body {
 /* ----------------------------------HERO---------------------------------- */
 .hero {
   background-color: grey;
+  padding: 272px 472px 206px 96px;
 }
 .hero-link {
   font-weight: 600;
@@ -108,10 +142,12 @@ body {
 }
 
 .hero-top-text {
+  margin-bottom: var(--tipycal-margin);
   color: rgba(157, 164, 189, 0.6);
 }
 
 .hero-title {
+  margin-bottom: var(--tipycal-margin);
   font-family: 'Raleway', sans-serif;
   font-size: 72px;
   line-height: 1.13;
@@ -126,37 +162,52 @@ body {
 }
 
 /* ----------------------------------ABOUT US---------------------------------- */
+.about {
+  padding-top: 169px;
+  padding-bottom: 91px;
+}
+
 .about-top-text {
+  margin-bottom: var(--tipycal-margin);
   color: #303030;
 }
 .about-title {
+  margin-bottom: var(--tipycal-margin);
   color: var(--second-color-title);
 }
 
 .about-bottom-text {
+  margin-bottom: var(--tipycal-margin);
   color: #555555;
 }
 
 .about-text {
+  margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
 }
 .about-btn {
+  display: block;
+  margin: auto;
   color: var(--second-color-btn);
 }
 
 /* ----------------------------------PRICES---------------------------------- */
 
 .prices {
+  padding-top: 130px;
+  padding-bottom: 130px;
   background-color: grey;
 }
 .prices-top-text {
+  margin-bottom: var(--tipycal-margin);
   color: rgba(157, 164, 189, 0.6);
 }
 
 .prices-title {
+  margin-bottom: 44px;
   color: var(--main-color-title);
 }
 
@@ -166,12 +217,28 @@ body {
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+.prices-list {
+  padding: 30px 40px;
+  border: 1px dashed #ffffff;
+}
 
 .prices-btn {
+  display: flex;
+  margin: auto;
   color: var(--main-color-btn);
 }
 
 /* ----------------------------------BENEFITS---------------------------------- */
+.benefits {
+  padding-top: 143px;
+  padding-bottom: 137px;
+}
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  padding: 24px 20px;
+  border: 1px solid #303030;
+}
 .benefits-item-count {
   font-weight: 700;
   font-size: 42px;
@@ -190,9 +257,11 @@ body {
 }
 
 .benefits-top-text {
+  margin-bottom: var(--tipycal-margin);
   color: #303030;
 }
 .benefits-title {
+  margin-bottom: var(--tipycal-margin);
   columns: var(--second-color-title);
 }
 
@@ -201,15 +270,22 @@ body {
 }
 
 /* ----------------------------------MASTERS---------------------------------- */
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
 .masters-top-text {
+  margin-bottom: var(--tipycal-margin);
   color: #303030;
 }
 
 .masters-title {
+  margin-bottom: 44px;
   color: var(--second-color-title);
 }
 
 .masters-subtitle {
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.38;
@@ -226,9 +302,29 @@ body {
   color: var(--accent);
 }
 
+.masters-list {
+  display: flex;
+}
+
+.masterd-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* ----------------------------------GALLERY---------------------------------- */
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
 .gallery-top-text {
+  margin-bottom: 44px;
   color: #303030;
+}
+
+.gallery-list {
+  display: flex;
+}
+.gallery-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* ----------------------------------ONLINE---------------------------------- */
@@ -242,15 +338,19 @@ body {
 
 /* ----------------------------------CONTACTS---------------------------------- */
 .contacts {
+  padding-top: 130px;
+  padding-bottom: 130px;
   background-color: grey;
 }
 
 .contacts-title {
+  margin-bottom: 40px;
   color: var(--main-color-title);
 }
 
 .contacts-address {
   font-style: normal;
+  margin-bottom: 70px;
 }
 
 .contacts-link {
@@ -259,8 +359,12 @@ body {
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+.contacts-link:not(:last-child) {
+  margin-bottom: var(--tipycal-margin);
+}
 
 .contacts-subtitle {
+  margin-bottom: var(--tipycal-margin);
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -277,6 +381,10 @@ body {
 }
 
 /* ----------------------------------FOOTER---------------------------------- */
+.footer {
+  padding-top: 57px;
+  padding-bottom: 55px;
+}
 .footer-copy {
   font-weight: 600;
   font-size: 11px;
@@ -296,4 +404,17 @@ body {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent);
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-list {
+  display: flex;
+  margin-left: auto;
+}
+.footer-item:not(:last-child) {
+  margin-right: 40px;
 }

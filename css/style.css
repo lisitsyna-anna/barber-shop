@@ -48,11 +48,22 @@ img {
 }
 
 .top-text {
+  display: flex;
+  align-items: center;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.top-text::before {
+  content: '';
+  margin-right: 20px;
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .bottom-text {
@@ -186,6 +197,8 @@ img {
 }
 
 .hero-top-text {
+  display: flex;
+  align-items: center;
   margin-bottom: var(--tipycal-margin);
   color: rgba(157, 164, 189, 0.6);
 }
@@ -282,15 +295,32 @@ img {
 
 .prices-list {
   flex-grow: 1;
-
   padding: 30px 40px;
-  border: 1px dashed #ffffff;
+}
+
+.prices-list-light {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list-dark {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .prices-item {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   margin-bottom: var(--tipycal-margin);
+}
+
+.prices-item::before {
+  content: '';
+  flex-grow: 1;
+  width: 100px;
+  height: 1px;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: rgba(157, 164, 189, 0.12);
 }
 
 .prices-item:last-child {
@@ -302,6 +332,10 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.prices-text-item:first-child {
+  order: -1;
 }
 
 .prices-btn {
@@ -328,6 +362,16 @@ img {
   margin-right: 130px;
 }
 
+.benefits-item {
+  position: relative;
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+
+  background: #f7f7f7;
+  border: none;
+}
+
 .benefits-item:nth-child(odd) {
   margin-right: 30px;
 }
@@ -340,14 +384,6 @@ img {
   width: 500px;
 }
 
-.benefits-item {
-  width: 170px;
-  height: 133px;
-  padding: 20px 24px;
-
-  background: #f7f7f7;
-  border: none;
-}
 .benefits-item-count {
   display: block;
 
@@ -357,6 +393,19 @@ img {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+}
+
+.benefits-item-count::after {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+
+  content: '+';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--accent);
 }
 
 .benefits-item-text {
@@ -489,12 +538,20 @@ img {
   display: flex;
 }
 
+.wrap-online-contacts {
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .online {
-  width: 50%;
+  width: calc(50% + 15px);
   padding-top: 130px;
-  padding-bottom: 193px;
-  padding-left: 58px;
-  background-color: black;
+  padding-bottom: 130px;
 }
 
 .online-title {
@@ -503,11 +560,11 @@ img {
 
 /* ----------------------------------CONTACTS---------------------------------- */
 .contacts {
-  width: 50%;
+  width: calc(50% - 15px);
   padding-top: 130px;
   padding-bottom: 130px;
   padding-left: 100px;
-  background-color: grey;
+  
 }
 
 .contacts-title {
@@ -520,17 +577,30 @@ img {
   margin-bottom: 70px;
 }
 
+.adress-item:not(:last-child) {
+  margin-bottom: var(--tipycal-margin);
+}
+
 .contacts-link {
+  display: flex;
+ align-items: center;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
-.contacts-link:not(:last-child) {
-  margin-bottom: var(--tipycal-margin);
+.contacts-icon{
+  margin-right: 16px;
+  stroke: currentColor;
+}
+
+.contacts-link:hover{
+  color: var(--accent);
 }
 
 .contacts-subtitle {
+  display: flex;
+  align-items: center;
   margin-bottom: var(--tipycal-margin);
   font-weight: 600;
   font-size: 11px;
@@ -540,13 +610,22 @@ img {
   color: #ffffff;
 }
 
-.contacts-time {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #9da4bd;
+.contacts-subtitle::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  margin-right: var(--tipycal-margin);
+  background-color: rgba(157, 164, 189, 0.4);
 }
 
+.contacts-time {
+
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: #9da4bd;
+  }
+}
 /* ----------------------------------FOOTER---------------------------------- */
 .footer {
   padding-top: 57px;
@@ -580,8 +659,18 @@ img {
 
 .footer-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
 }
 .footer-item:not(:last-child) {
   margin-right: 40px;
+}
+
+.footer-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  margin-right: 40px;
+  background-color: currentColor;
 }

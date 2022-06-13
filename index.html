@@ -469,12 +469,75 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+      <div class="modal ">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="icon-close" width="18" height="18">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title">Заголовок модального окна</p>
+        <form>
+          <label class="modal-label">
+            Ваше имя
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              placeholder="Николай"
+              minlength="2"
+              required
+            />
+          </label>
+
+          <div class="modal-field">
+            <label for="user-phone" class="modal-label">Ваш телефон</label>
+            <input
+              type="tel"
+              id="user-phone"
+              class="modal-input"
+              name="user-phone"
+              placeholder="+380 (096) 111-11-11"
+              title="+380 (096) 111-11-11"
+              required
+            />
+          </div>
+
+          <input type="email" class="modal-input" name="user-email" placeholder="Ваша почта" />
+
+          <div class="modal-field">
+            <label for="user-text" class="modal-label">Ваш комментарий</label>
+            <textarea name="user-text" id="user-text" class="modal-text" placeholder="Введите текст"></textarea>
+
+            <fieldset>
+              <legend>Size</legend>
+              <label for="bid">Big</label>
+              <input type="radio" id="bid" name="size" value="big">
+
+              <label for="small">Small</label>
+              <input type="radio" id="small" name="size" value="small">
+            </fieldset>
+
+            <fieldset>
+              <legend>Add</legend>
+              <label for="tomato">Tomato</label>
+              <input type="checkbox" id="tomato" name="add" value="tomato">
+
+              <label for="chesee">Chesee</label>
+              <input type="checkbox" id="chesee" name="add" value="chesee">
+
+              <label for="peperoni">Peperoni</label>
+              <input type="checkbox" id="peperoni" name="add" value="peperoni">
+            </fieldset>
+            <label for="user-city" class="modal-label">Ваш город</label>
+            <select name="user-city" id="user-city" class="modal-input">
+              <option value="Paris">Paris</option>  
+              <option value="London">London</option>  
+              <option value="NY">NY</option>
+            </select>
+            
+
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

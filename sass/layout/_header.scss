@@ -1,0 +1,52 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header__logo {
+  margin-right: 69px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav__link,
+.connect__tel {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+  transition: color 300ms ease;
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+}
+
+.connect {
+  margin-left: auto;
+}
+
+.connect__btn {
+  margin-left: 40px;
+  color: var(--main-color-btn);
+}

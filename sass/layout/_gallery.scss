@@ -1,0 +1,16 @@
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.gallery__top-text {
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  margin-right: -30px;
+}
+.gallery__item {
+  flex-basis: calc((100% - 120px) / 4);
+  margin-right: 30px;
+}

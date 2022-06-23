@@ -25,43 +25,43 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <a class="header-logo" href="./index.html">
-          <svg class="icon-logo" width="66" height="55">
+      <div class="container header__container">
+        <a class="logo header__logo" href="./index.html">
+          <svg class="logo__icon" width="66" height="55">
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
         </a>
-        <nav class="header-nav">
-          <ul class="header-list list">
-            <li class="header-item"><a href="#about" class="header-link link">О нас</a></li>
-            <li class="header-item"><a href="#price" class="header-link link">Услуги и цены</a></li>
-            <li class="header-item"><a href="#masters" class="header-link link">Мастера</a></li>
-            <li class="header-item"><a href="#contacts" class="header-link link">Контакты</a></li>
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item"><a href="#about" class="nav__link link">О нас</a></li>
+            <li class="nav__item"><a href="#price" class="nav__link link">Услуги и цены</a></li>
+            <li class="nav__item"><a href="#masters" class="nav__link link">Мастера</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link link">Контакты</a></li>
           </ul>
         </nav>
-        <div class="header-connect">
-          <a class="header-tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="header-btn btn" type="button" data-modal-open>онлайн-запись</button>
+        <div class="connect">
+          <a class="connect__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
+          <button class="connect__btn btn" type="button" data-modal-open>онлайн-запись</button>
         </div>
       </div>
     </header>
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="container">
-          <div class="hero-soc">
-            <ul class="hero-list list">
-              <li class="hero-item">
-                <a class="hero-link link" href="" target="_blank" rel="noopener noreferrer"
+        <div class="container hero__container">
+          <div class="soc">
+            <ul class="soc__list list">
+              <li class="soc__item">
+                <a class="soc__link link" href="" target="_blank" rel="noopener noreferrer"
                   >Instagram</a
                 >
               </li>
-              <li class="hero-item">
-                <a class="hero-link link" href="" target="_blank" rel="noopener noreferrer"
+              <li class="soc__item">
+                <a class="soc__link link" href="" target="_blank" rel="noopener noreferrer"
                   >Youtube</a
                 >
               </li>
@@ -69,9 +69,13 @@
           </div>
 
           <div class="hero-content">
-            <p class="hero-top-text top-text" lang="en">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title" lang="en" data-aos="fade-right">BarberShop</h1>
-            <p class="hero-bottom-text bottom-text">
+            <p class="hero-content__top-text top-text top-text--light" lang="en">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero-content__title title--light" lang="en" data-aos="fade-right">
+              BarberShop
+            </h1>
+            <p class="hero-content__bottom-text bottom-text bottom-text--light">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
             </p>
           </div>
@@ -80,12 +84,12 @@
 
       <!-- About us -->
       <section class="about" id="about">
-        <div class="container">
-          <ul class="about-list list">
-            <li class="about-item">
+        <div class="container about__container">
+          <ul class="pic-list list">
+            <li class="pic-list__item">
               <img src="./images/img-about1.jpeg" alt="Барбер бреет шею" width="270" height="445" />
             </li>
-            <li class="about-item">
+            <li class="pic-list__item">
               <img
                 src="./images/img-about2.jpeg"
                 alt="Барбер делает кантик"
@@ -95,19 +99,23 @@
             </li>
           </ul>
           <div class="about-content">
-            <p class="about-top-text top-text">О нас</p>
-            <h2 class="about-title title" data-aos="fade-left">Лучший Барбершоп твоего города</h2>
-            <p class="about-bottom-text bottom-text">
+            <p class="about-content__top-text top-text top-text--dark">О нас</p>
+            <h2 class="about-content__title title title--dark" data-aos="fade-left">
+              Лучший Барбершоп твоего города
+            </h2>
+            <p class="about-content__bottom-text bottom-text bottom-text--dark">
               Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
             </p>
 
-            <p class="about-text">
+            <p class="about-content__text">
               Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И
               когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы
               команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="about-btn btn" data-modal-open>онлайн-запись</button>
+            <button type="button" class="about-content__btn btn" data-modal-open>
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
@@ -115,75 +123,81 @@
       <!-- Prices -->
       <section class="prices" id="price">
         <div class="container">
-          <p class="prices-top-text top-text">Проведи время в компании лучших мастеров</p>
-          <h2 class="prices-title title" data-aos="fade-right">Услуги и цены</h2>
-          <div class="prices-wrap">
-            <ul class="prices-list prices-list-light list">
-              <l1 class="prices-item">
-                <p class="prices-text-item">Мужская стрижка</p>
-                <p class="prices-text-item">от 300 грн.</p>
+          <p class="prices__top-text top-text top-text--light">
+            Проведи время в компании лучших мастеров
+          </p>
+          <h2 class="prices__title title title--light" data-aos="fade-right">Услуги и цены</h2>
+          <div class="prices__wrap">
+            <ul class="prices prices--light list">
+              <l1 class="prices__item">
+                <p class="prices__text">Мужская стрижка</p>
+                <p class="prices__text">от 300 грн.</p>
               </l1>
-              <l1 class="prices-item">
-                <p class="prices-text-item">Стрижка бороды</p>
-                <p class="prices-text-item">от 200 грн.</p>
+              <l1 class="prices__item">
+                <p class="prices__text">Стрижка бороды</p>
+                <p class="prices__text">от 200 грн.</p>
               </l1>
-              <l1 class="prices-item">
-                <p class="prices-text-item">Стрижка усов</p>
-                <p class="prices-text-item">от 200 грн.</p>
+              <l1 class="prices__item">
+                <p class="prices__text">Стрижка усов</p>
+                <p class="prices__text">от 200 грн.</p>
               </l1>
-              <l1 class="prices-item">
-                <p class="prices-text-item">Бритье опасной бритвой</p>
-                <p class="prices-text-item">от 200 грн.</p>
+              <l1 class="prices__item">
+                <p class="prices__text">Бритье опасной бритвой</p>
+                <p class="prices__text">от 200 грн.</p>
               </l1>
             </ul>
 
-            <ul class="prices-list prices-list-dark list">
-              <li class="prices-item">
-                <p class="prices-text-item">Cтрижка у стажера</p>
-                <p class="prices-text-item">от 50 грн.</p>
+            <ul class="prices prices--dark list">
+              <li class="prices__item">
+                <p class="prices__text">Cтрижка у стажера</p>
+                <p class="prices__text">от 50 грн.</p>
               </li>
-              <li class="prices-item">
-                <p class="prices-text-item">Стрижка под насадку</p>
-                <p class="prices-text-item">от 200 грн.</p>
+              <li class="prices__item">
+                <p class="prices__text">Стрижка под насадку</p>
+                <p class="prices__text">от 200 грн.</p>
               </li>
-              <li class="prices-item">
-                <p class="prices-text-item">Детская стрижка (до 12 лет)</p>
-                <p class="prices-text-item">от 300 грн.</p>
+              <li class="prices__item">
+                <p class="prices__text">Детская стрижка (до 12 лет)</p>
+                <p class="prices__text">от 300 грн.</p>
               </li>
-              <li class="prices-item">
-                <p class="prices-text-item">Камуфлирование седины</p>
-                <p class="prices-text-item">от 200 грн.</p>
+              <li class="prices__item">
+                <p class="prices__text">Камуфлирование седины</p>
+                <p class="prices__text">от 200 грн.</p>
               </li>
             </ul>
           </div>
-          <button type="button" class="prices-btn btn" data-modal-open>онлайн-запись</button>
+          <button type="button" class="prices__btn btn" data-modal-open>онлайн-запись</button>
         </div>
       </section>
 
       <section class="benefits">
-        <div class="container">
+        <div class="container benefits__container">
           <ul class="benefits-list list">
-            <li class="benefits-item">
-              <span class="benefits-item-count">600</span>
-              <p class="benefits-item-text">Довольных клиентов в день</p>
+            <li class="benefits-list__item">
+              <span class="benefits-list__count">600</span>
+              <p class="benefits-list__text">Довольных клиентов в день</p>
             </li>
-            <li class="benefits-item">
-              <span class="benefits-item-count">50</span>
-              <p class="benefits-item-text">Наград за отличный сервис</p>
+            <li class="benefits-list__item">
+              <span class="benefits-list__count">50</span>
+              <p class="benefits-list__text">Наград за отличный сервис</p>
             </li>
-            <li class="benefits-item">
-              <span class="benefits-item-count">20</span>
-              <p class="benefits-item-text">Лучших мастеров Киева</p>
+            <li class="benefits-list__item">
+              <span class="benefits-list__count">20</span>
+              <p class="benefits-list__text">Лучших мастеров Киева</p>
             </li>
-            <li class="benefits-item">
-              <span class="benefits-item-count">100</span>
-              <p class="benefits-item-text">Подарков постоянным клиентам</p>
+            <li class="benefits-list__item">
+              <span class="benefits-list__count">100</span>
+              <p class="benefits-list__text">Подарков постоянным клиентам</p>
             </li>
           </ul>
           <div class="benefits-content">
-            <p class="benefits-top-text top-text">старая традиционная школа</p>
-            <h2 class="benefits-title title" data-aos="fade-left">Почему приходят именно к нам?</h2>
-            <p class="benefits-bottom-text bottom-text">
+            <p class="benefits-content__top-text top-text top-text--dark">
+              старая традиционная школа
+            </p>
+            <h2 class="benefits-content__title title title--dark" data-aos="fade-left">
+              Почему приходят именно к нам?
+            </h2>
+            <p class="benefits-content__bottom-text bottom-text bottom-text--dark">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
               прочитать.
             </p>
@@ -193,19 +207,19 @@
 
       <!-- Masters -->
       <section class="masters" id="masters">
-        <div class="container">
-          <p class="masters-top-text top-text">для настоящих ценителей атмосферы</p>
-          <h2 class="masters-title title" data-aos="fade-right">Наши мастера</h2>
-          <ul class="masters-list list">
-            <li class="masters-item">
-              <div class="masters-tumth">
+        <div class="container masters__container">
+          <p class="masters__top-text top-text top-text--dark">для настоящих ценителей атмосферы</p>
+          <h2 class="masters__title title title--dark" data-aos="fade-right">Наши мастера</h2>
+          <ul class="team list">
+            <li class="team__item">
+              <div class="team__tumth">
                 <img
                   src="./images/master1.jpeg"
                   alt="Барбер стрижет клиента"
                   width="370"
                   height="346"
                 />
-                <p class="masters-overlay">
+                <p class="team__overlay">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime placeat
                   distinctio est alias, enim consequuntur unde dolore voluptates. Magnam quam vel,
                   iusto cumque, debitis dolore iste nam voluptatem commodi repellendus minus non
@@ -214,45 +228,45 @@
                 </p>
               </div>
 
-              <h3 lang="en" class="masters-subtitle">John Smith</h3>
-              <p lang="en" class="masters-name">Extreme Barber</p>
-              <ul class="masters-soc-list list">
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link">
-                    <svg class="soc-icon" width="20" height="20">
+              <h3 lang="en" class="team__subtitle">John Smith</h3>
+              <p lang="en" class="team__name">Extreme Barber</p>
+              <ul class="socials list">
+                <li class="socials__item">
+                  <a href="" class="socials__link link">
+                    <svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-twitter"></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-facebook"></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-linkedin"></use></svg
                   ></a>
                 </li>
               </ul>
             </li>
-            <li class="masters-item">
-              <div class="masters-tumth">
+            <li class="team__item">
+              <div class="team__tumth">
                 <img
                   src="./images/master2.jpeg"
                   alt="Барбер стрижет клиента"
                   width="370"
                   height="346"
                 />
-                <p class="masters-overlay">
+                <p class="team__overlay">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime placeat
                   distinctio est alias, enim consequuntur unde dolore voluptates. Magnam quam vel,
                   iusto cumque, debitis dolore iste nam voluptatem commodi repellendus minus non
@@ -260,45 +274,45 @@
                   laborum. Eum at voluptates ex sint temporibus.
                 </p>
               </div>
-              <h3 lang="en" class="masters-subtitle">Michele Doe</h3>
-              <p lang="en" class="masters-name">Extreme Barber</p>
-              <ul class="masters-soc-list list">
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link">
-                    <svg class="soc-icon" width="20" height="20">
+              <h3 lang="en" class="team__subtitle">Michele Doe</h3>
+              <p lang="en" class="team__name">Extreme Barber</p>
+              <ul class="socials list">
+                <li class="socials__item">
+                  <a href="" class="socials__link link">
+                    <svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-twitter"></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-facebook"></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-linkedin"></use></svg
                   ></a>
                 </li>
               </ul>
             </li>
-            <li class="masters-item">
-              <div class="masters-tumth">
+            <li class="team__item">
+              <div class="team__tumth">
                 <img
                   src="./images/master3.jpeg"
                   alt="Барбер стрижет клиента"
                   width="370"
                   height="346"
                 />
-                <p class="masters-overlay">
+                <p class="team__overlay">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime placeat
                   distinctio est alias, enim consequuntur unde dolore voluptates. Magnam quam vel,
                   iusto cumque, debitis dolore iste nam voluptatem commodi repellendus minus non
@@ -306,31 +320,31 @@
                   laborum. Eum at voluptates ex sint temporibus.
                 </p>
               </div>
-              <h3 lang="en" class="masters-subtitle">Alan Black</h3>
-              <p lang="en" class="masters-name">Extreme Barber</p>
-              <ul class="masters-soc-list list">
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link">
-                    <svg class="soc-icon" width="20" height="20">
+              <h3 lang="en" class="team__subtitle">Alan Black</h3>
+              <p lang="en" class="team__name">Extreme Barber</p>
+              <ul class="socials list">
+                <li class="socials__item">
+                  <a href="" class="socials__link link">
+                    <svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-twitter"></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-facebook"></use></svg
                   ></a>
                 </li>
-                <li class="masters-soc-item">
-                  <a href="" class="masters-soc-link link"
-                    ><svg class="soc-icon" width="20" height="20">
+                <li class="socials__item">
+                  <a href="" class="socials__link link"
+                    ><svg class="socials__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-linkedin"></use></svg
                   ></a>
                 </li>
@@ -342,10 +356,12 @@
 
       <section class="gallery">
         <div class="container">
-          <p class="gallery-top-text top-text">На латинском языке “барба” означает “борода”</p>
+          <p class="gallery__top-text top-text top-text--dark">
+            На латинском языке “барба” означает “борода”
+          </p>
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="gallery-list list">
-            <li class="gallery-item">
+            <li class="gallery__item">
               <img
                 src="./images/gallery1.jpeg"
                 alt="Барбер стрижет клиента"
@@ -353,7 +369,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery__item">
               <img
                 src="./images/gallery2.jpeg"
                 alt="Барбер стрижет клиента"
@@ -361,7 +377,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery__item">
               <img
                 src="./images/gallery3.jpeg"
                 alt="Барбер стрижет клиента"
@@ -369,7 +385,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery__item">
               <img
                 src="./images/gallery4.jpeg"
                 alt="Барбер стрижет клиента"
@@ -381,61 +397,79 @@
         </div>
       </section>
 
-      <div class="wrap-online-contacts">
-        <div class="container">
+      <div class="contact-wrap">
+        <div class="container contact-wrap__container">
           <section class="online">
-            <h2 class="online-title title" data-aos="fade-right">Онлайн-запись</h2>
+            <h2 class="online__title title title--light" data-aos="fade-right">Онлайн-запись</h2>
             <form class="online-form" autocomplete="off">
-              <label class="form-field">
-                <input class="form-input" type="text" name="name" placeholder="Имя*" required />
-              </label>
+              <div class="online-form__field">
+                <input
+                  class="online-form__input"
+                  type="text"
+                  name="online-name"
+                  id="online-name"
+                  placeholder=" "
+                  required
+                />
+                <label class="online-form__label" for="online-name">Имя*</label>
+              </div>
 
-              <label class="form-field">
-                <input class="form-input" type="tel" name="name" placeholder="Телефон*" required />
-              </label>
+              <div class="online-form__field">
+                <input
+                  class="online-form__input"
+                  type="tel"
+                  name="online-phone"
+                  id="online-phone"
+                  placeholder=" "
+                  required
+                />
+                <label class="online-form__label" for="online-phone">Телефон*</label>
+              </div>
 
-              <label class="form-field-last">
+              <div class="online-form__field--last">
                 <textarea
-                  class="form-comment"
-                  name="comment"
+                  id="online-comment"
+                  class="online-form__comment"
+                  name="online-comment"
                   rows="10"
-                  placeholder="сообщение"
+                  placeholder=" "
                 ></textarea>
-              </label>
+                <label class="online-form__label" for="online-comment">Cообщение</label>
+              </div>
 
-              <button type="submit" class="btn form-btn">Отправить</button>
+              <button type="submit" class="btn online-form__btn">Отправить</button>
             </form>
           </section>
 
           <section class="contacts" id="contacts">
-            <h2 class="contacts-title title" data-aos="fade-left">Контакты</h2>
-            <address class="contacts-address">
-              <ul class="address-list list">
-                <li class="adress-item">
+            <h2 class="contacts__title title title--light" data-aos="fade-left">Контакты</h2>
+            <address class="contacts__address">
+              <ul class="address list">
+                <li class="adress__item">
                   <a
                     href="https://goo.gl/maps/tJ6gX38e55JNDVaZ8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="contacts-link link"
+                    class="address__link link"
                   >
-                    <svg class="contacts-icon" width="24" height="24">
+                    <svg class="address__icon" width="24" height="24">
                       <use href="./images/icons.svg#icon-map-pin"></use>
                     </svg>
                     ул. Васильковая, <br />
                     7А Киев, 08132</a
                   >
                 </li>
-                <li class="adress-item">
-                  <a href="tel:+380441111111" class="contacts-link link">
-                    <svg class="contacts-icon" width="24" height="24">
+                <li class="adress__item">
+                  <a href="tel:+380441111111" class="address__link link">
+                    <svg class="address__icon" width="24" height="24">
                       <use href="./images/icons.svg#icon-mail"></use>
                     </svg>
                     +38 044 111 11 11</a
                   >
                 </li>
-                <li class="adress-item">
-                  <a href="mailto:barbershop@email.com" class="contacts-link">
-                    <svg class="contacts-icon" width="24" height="24">
+                <li class="adress__item">
+                  <a href="mailto:barbershop@email.com" class="address__link">
+                    <svg class="address__icon" width="24" height="24">
                       <use href="./images/icons.svg#icon-phone"></use>
                     </svg>
                     barbershop@email.com</a
@@ -444,24 +478,24 @@
               </ul>
             </address>
 
-            <p class="contacts-subtitle">время работы</p>
-            <p class="contacts-time">Ежедневно с 9:00 до 22:00</p>
+            <p class="contacts__subtitle">время работы</p>
+            <p class="contacts__time">Ежедневно с 9:00 до 22:00</p>
           </section>
         </div>
       </div>
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <p class="footer-copy">&copy; Copyright 2020</p>
-        <ul class="footer-list list">
-          <li class="footer-item">
-            <a href="" target="_blank" rel="noopener noreferrer" class="footer-link link"
+      <div class="container footer__container">
+        <p class="footer__copy-text">&copy; Copyright 2020</p>
+        <ul class="soc-footer list">
+          <li class="soc-footer__item">
+            <a href="" target="_blank" rel="noopener noreferrer" class="soc-footer__link link"
               >Instagram</a
             >
           </li>
-          <li class="footer-item">
-            <a href="" target="_blank" rel="noopener noreferrer" class="footer-link link"
+          <li class="soc-footer__item">
+            <a href="" target="_blank" rel="noopener noreferrer" class="soc-footer__link link"
               >Youtube</a
             >
           </li>
@@ -469,74 +503,85 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal ">
-        <button type="button" class="modal-close-btn" data-modal-close>
-          <svg class="icon-close" width="18" height="18">
+      <div class="modal">
+        <button type="button" class="modal__close-btn" data-modal-close>
+          <svg class="modal__close-icon" width="18" height="18">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <p class="modal-title">Заголовок модального окна</p>
-        <form>
-          <label class="modal-label">
-            Ваше имя
-            <input
-              type="text"
-              class="modal-input"
-              name="user-name"
-              placeholder="Николай"
-              minlength="2"
-              required
-            />
-          </label>
+        <p class="modal__title title--dark">Оставте свои данные, мы вам перезвоним</p>
 
-          <div class="modal-field">
-            <label for="user-phone" class="modal-label">Ваш телефон</label>
-            <input
-              type="tel"
-              id="user-phone"
-              class="modal-input"
-              name="user-phone"
-              placeholder="+380 (096) 111-11-11"
-              title="+380 (096) 111-11-11"
-              required
-            />
+        <form class="modal-form">
+          <div class="modal-form__field">
+            <label for="user-name" class="modal-form__label">Ваше имя </label>
+
+            <div class="modal-form__input-wrap">
+              <input
+                id="user-name"
+                type="text"
+                class="modal-form__input"
+                name="user-name"
+                minlength="2"
+                required
+              />
+              <svg class="modal-form__icon" width="18" height="18px">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </div>
           </div>
 
-          <input type="email" class="modal-input" name="user-email" placeholder="Ваша почта" />
+          <div class="modal-form__field">
+            <label for="user-phone" class="modal-form__label">Ваш телефон</label>
 
-          <div class="modal-field">
-            <label for="user-text" class="modal-label">Ваш комментарий</label>
-            <textarea name="user-text" id="user-text" class="modal-text" placeholder="Введите текст"></textarea>
+            <div class="modal-form__input-wrap">
+              <input
+                type="tel"
+                id="user-phone"
+                class="modal-form__input"
+                name="user-phone"
+                title="+380 (096) 111-11-11"
+                required
+              />
+              <svg class="modal-form__icon" width="18" height="18px">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+          </div>
 
-            <fieldset>
-              <legend>Size</legend>
-              <label for="bid">Big</label>
-              <input type="radio" id="bid" name="size" value="big">
+          <div class="modal-form__field">
+            <label class="modal-form__label" for="user-email">Ваша почта</label>
 
-              <label for="small">Small</label>
-              <input type="radio" id="small" name="size" value="small">
-            </fieldset>
+            <div class="modal-form__input-wrap">
+              <input id="user-email" type="email" class="modal-form__input" name="user-email" />
+              <svg class="modal-form__icon" width="18" height="18px">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </div>
+          </div>
 
-            <fieldset>
-              <legend>Add</legend>
-              <label for="tomato">Tomato</label>
-              <input type="checkbox" id="tomato" name="add" value="tomato">
+          <div class="modal-form__field modal-form__field--comment">
+            <label for="user-text" class="modal-form__label">Ваш комментарий</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-form__comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <div class="modal-form__field modal-form__field--checkbox">
+            <input
+              class="modal-form__checkbox visually-hidden"
+              type="checkbox"
+              name="privacy"
+              id="privacy"
+              value="true"
+            />
+            <label for="privacy" class="modal-form__label modal-form__label--checkbox"
+              >Соглашаюсь с обработкой персональных данных</label
+            >
+          </div>
 
-              <label for="chesee">Chesee</label>
-              <input type="checkbox" id="chesee" name="add" value="chesee">
-
-              <label for="peperoni">Peperoni</label>
-              <input type="checkbox" id="peperoni" name="add" value="peperoni">
-            </fieldset>
-            <label for="user-city" class="modal-label">Ваш город</label>
-            <select name="user-city" id="user-city" class="modal-input">
-              <option value="Paris">Paris</option>  
-              <option value="London">London</option>  
-              <option value="NY">NY</option>
-            </select>
-            
-
-          <button type="submit">Отправить</button>
+          <button class="modal-form__btn btn" type="submit">Отправить</button>
         </form>
       </div>
     </div>

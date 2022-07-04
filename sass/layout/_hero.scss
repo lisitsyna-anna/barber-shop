@@ -63,7 +63,7 @@
   }
 }
 
-.hero-content--slide3 {
+.hero-content {
   background-color: #303030;
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
     url(../images/hero3-mobile.jpeg);
@@ -98,84 +98,6 @@
     @include retina {
       background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
         url(../images/hero3-desktop@2x.jpeg);
-    }
-  }
-}
-
-.hero-content--slide2 {
-  background-color: #303030;
-  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-    url(../images/hero2-mobile.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  padding: 208px 31px 183px;
-  flex-grow: 1;
-
-  @include retina {
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/hero2-mobile@2x.jpeg);
-  }
-
-  @include tablet {
-    padding: 280px 70px 234px;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/hero2-tablet.jpeg);
-
-    @include retina {
-      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-        url(../images/hero2-tablet@2x.jpeg);
-    }
-  }
-
-  @include desktop {
-    padding: 272px 96px 206px 96px;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/hero2-desktop.jpeg);
-
-    @include retina {
-      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-        url(../images/hero2-desktop@2x.jpeg);
-    }
-  }
-}
-
-.hero-content--slide1 {
-  background-color: #303030;
-  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-    url(../images/hero1-mobile.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  padding: 208px 31px 183px;
-  flex-grow: 1;
-
-  @include retina {
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/hero1-mobile@2x.jpeg);
-  }
-
-  @include tablet {
-    padding: 280px 70px 234px;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/hero1-tablet.jpeg);
-
-    @include retina {
-      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-        url(../images/hero1-tablet@2x.jpeg);
-    }
-  }
-
-  @include desktop {
-    padding: 272px 96px 206px 96px;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-      url(../images/hero1-desktop.jpeg);
-
-    @include retina {
-      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-        url(../images/hero1-desktop@2x.jpeg);
     }
   }
 }

@@ -25,6 +25,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -133,17 +136,48 @@
             </ul>
           </div>
 
-          <div class="hero-content">
-            <p class="hero-content__top-text top-text top-text--light" lang="en">
-              A hair salon for men in Kyiv
-            </p>
-            <h1 class="hero-content__title title--light" lang="en" data-aos="fade-right">
-              BarberShop
-            </h1>
-            <p class="hero-content__bottom-text bottom-text bottom-text--light">
-              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
-            </p>
+          <!-- Cлайдер -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="hero-content hero-content--slide1 swiper-slide">
+                <p class="hero-content__top-text top-text top-text--light" lang="en">
+                  A hair salon for men in Kyiv
+                </p>
+                <h1 class="hero-content__title title--light" lang="en" data-aos="fade-right">
+                  BarberShop
+                </h1>
+                <p class="hero-content__bottom-text bottom-text bottom-text--light">
+                  Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+                </p>
+              </div>
+
+              <div class="hero-content hero-content--slide2 swiper-slide">
+                <p class="hero-content__top-text top-text top-text--light" lang="en">
+                  A hair salon for men in Kyiv
+                </p>
+                <h1 class="hero-content__title title--light" lang="en" data-aos="fade-right">
+                  BarberShop
+                </h1>
+                <p class="hero-content__bottom-text bottom-text bottom-text--light">
+                  Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+                </p>
+              </div>
+
+              <div class="hero-content hero-content--slide3 swiper-slide">
+                <p class="hero-content__top-text top-text top-text--light" lang="en">
+                  A hair salon for men in Kyiv
+                </p>
+                <h1 class="hero-content__title title--light" lang="en" data-aos="fade-right">
+                  BarberShop
+                </h1>
+                <p class="hero-content__bottom-text bottom-text bottom-text--light">
+                  Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+                </p>
+              </div>
+            </div>
           </div>
+
+          <!-- --------- -->
         </div>
       </section>
 
@@ -813,6 +847,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
     </script>
   </body>
 </html>

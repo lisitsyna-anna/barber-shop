@@ -47,10 +47,75 @@
           <a class="connect__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
           <button class="connect__btn btn" type="button" data-modal-open>онлайн-запись</button>
         </div>
+
+        <button type="button" class="header__menu-open-btn" aria-controls="mobile-menu">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!------------ Мобильное меню------------------------ -->
+
+      <div class="mobile-menu is-hidden" id="mobile-menu">
+        <div class="container mobile-menu__container">
+          <div class="mobile-menu__top">
+            <button type="button" class="mobile-menu__close-btn">
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-close-menu"></use>
+              </svg>
+            </button>
+
+            <ul class="mobile-menu__list list">
+              <li class="mobile-menu__item">
+                <a href="#about" class="mobile-menu__link link">О нас</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#price" class="mobile-menu__link link">Услуги и цены</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#masters" class="mobile-menu__link link">Мастера</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#contacts" class="mobile-menu__link link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-menu__bottom">
+            <div class="mobile-menu__connect">
+              <a class="mobile-menu__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
+              <button class="mobile-menu__btn btn" type="button" data-modal-open>
+                онлайн-запись
+              </button>
+            </div>
+
+            <ul class="mobile-menu__soc-list list">
+              <li class="mobile-menu__soc-item">
+                <a
+                  href="https://www.google.com/"
+                  class="mobile-menu__soc-link link"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu__soc-item">
+                <a
+                  href=""
+                  class="mobile-menu__soc-link link"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
-      <!-- Hero -->
+      <!------------------Hero-------------------- -->
       <section class="hero">
         <div class="container hero__container">
           <div class="soc">
@@ -82,27 +147,55 @@
         </div>
       </section>
 
-      <!-- About us -->
+      <!------------------ About us ----------------------->
       <section class="about" id="about">
         <div class="container about__container">
           <ul class="pic-list list">
             <li class="pic-list__item">
-              <img src="./images/img-about1.jpeg" alt="Барбер бреет шею" width="270" height="445" />
+              <picture>
+                <source
+                  srcset="./images/about1-tablet.jpeg 1x, ./images/about1-tablet@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) 330px, 50vw"
+                />
+
+                <source
+                  srcset="./images/about1-desktop.jpeg 1x, ./images/about1-desktop@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 768px) 270px, 25vw"
+                />
+
+                <img src="./images/about1-desktop.jpeg" alt="Барбер бреет шею" />
+              </picture>
             </li>
             <li class="pic-list__item">
-              <img
-                src="./images/img-about2.jpeg"
-                alt="Барбер делает кантик"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="./images/about2-tablet.jpeg 1x, ./images/about2-tablet@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) 330px, 50vw"
+                />
+
+                <source
+                  srcset="./images/about2-desktop.jpeg 1x, ./images/about2-desktop@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 768px) 270px, 25vw"
+                />
+
+                <img src="./images/about2-desktop.jpeg" alt="Барбер делает кантик" />
+              </picture>
             </li>
           </ul>
           <div class="about-content">
             <p class="about-content__top-text top-text top-text--dark">О нас</p>
-            <h2 class="about-content__title title title--dark" data-aos="fade-left">
+            <h2 class="about-content__title title title--dark" data-aos="fade-right">
               Лучший Барбершоп твоего города
             </h2>
+
             <p class="about-content__bottom-text bottom-text bottom-text--dark">
               Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
             </p>
@@ -120,7 +213,7 @@
         </div>
       </section>
 
-      <!-- Prices -->
+      <!------------------- Prices -------------------->
       <section class="prices" id="price">
         <div class="container">
           <p class="prices__top-text top-text top-text--light">
@@ -128,41 +221,41 @@
           </p>
           <h2 class="prices__title title title--light" data-aos="fade-right">Услуги и цены</h2>
           <div class="prices__wrap">
-            <ul class="prices prices--light list">
-              <l1 class="prices__item">
-                <p class="prices__text">Мужская стрижка</p>
-                <p class="prices__text">от 300 грн.</p>
+            <ul class="prices-list prices-list--light list">
+              <l1 class="prices-list__item">
+                <p class="prices-list__text">Мужская стрижка</p>
+                <p class="prices-list__text">от 300 грн.</p>
               </l1>
-              <l1 class="prices__item">
-                <p class="prices__text">Стрижка бороды</p>
-                <p class="prices__text">от 200 грн.</p>
+              <l1 class="prices-list__item">
+                <p class="prices-list__text">Стрижка бороды</p>
+                <p class="prices-list__text">от 200 грн.</p>
               </l1>
-              <l1 class="prices__item">
-                <p class="prices__text">Стрижка усов</p>
-                <p class="prices__text">от 200 грн.</p>
+              <l1 class="prices-list__item">
+                <p class="prices-list__text">Стрижка усов</p>
+                <p class="prices-list__text">от 200 грн.</p>
               </l1>
-              <l1 class="prices__item">
-                <p class="prices__text">Бритье опасной бритвой</p>
-                <p class="prices__text">от 200 грн.</p>
+              <l1 class="prices-list__item">
+                <p class="prices-list__text">Бритье опасной бритвой</p>
+                <p class="prices-list__text">от 200 грн.</p>
               </l1>
             </ul>
 
-            <ul class="prices prices--dark list">
-              <li class="prices__item">
-                <p class="prices__text">Cтрижка у стажера</p>
-                <p class="prices__text">от 50 грн.</p>
+            <ul class="prices-list prices-list--dark list">
+              <li class="prices-list__item">
+                <p class="prices-list__text">Cтрижка у стажера</p>
+                <p class="prices-list__text">от 50 грн.</p>
               </li>
-              <li class="prices__item">
-                <p class="prices__text">Стрижка под насадку</p>
-                <p class="prices__text">от 200 грн.</p>
+              <li class="prices-list__item">
+                <p class="prices-list__text">Стрижка под насадку</p>
+                <p class="prices-list__text">от 200 грн.</p>
               </li>
-              <li class="prices__item">
-                <p class="prices__text">Детская стрижка (до 12 лет)</p>
-                <p class="prices__text">от 300 грн.</p>
+              <li class="prices-list__item">
+                <p class="prices-list__text">Детская стрижка (до 12 лет)</p>
+                <p class="prices-list__text">от 300 грн.</p>
               </li>
-              <li class="prices__item">
-                <p class="prices__text">Камуфлирование седины</p>
-                <p class="prices__text">от 200 грн.</p>
+              <li class="prices-list__item">
+                <p class="prices-list__text">Камуфлирование седины</p>
+                <p class="prices-list__text">от 200 грн.</p>
               </li>
             </ul>
           </div>
@@ -170,6 +263,7 @@
         </div>
       </section>
 
+      <!----------------- Benefits ------------------------>
       <section class="benefits">
         <div class="container benefits__container">
           <ul class="benefits-list list">
@@ -194,7 +288,7 @@
             <p class="benefits-content__top-text top-text top-text--dark">
               старая традиционная школа
             </p>
-            <h2 class="benefits-content__title title title--dark" data-aos="fade-left">
+            <h2 class="benefits-content__title title title--dark" data-aos="fade-right">
               Почему приходят именно к нам?
             </h2>
             <p class="benefits-content__bottom-text bottom-text bottom-text--dark">
@@ -213,12 +307,31 @@
           <ul class="team list">
             <li class="team__item">
               <div class="team__tumth">
-                <img
-                  src="./images/master1.jpeg"
-                  alt="Барбер стрижет клиента"
-                  width="370"
-                  height="346"
-                />
+                <picture>
+                  <source
+                    srcset="./images/master1-mobile.jpeg 1x, /images/master1-mobile@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(max-width: 767px )"
+                    sizes="(max-width: 767px) 418px, 100vw"
+                  />
+
+                  <source
+                    srcset="./images/master1-tablet.jpeg 1x, /images/master1-tablet@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    sizes="(min-width: 768px) 450px, 100vw"
+                  />
+
+                  <source
+                    srcset="./images/master1-desktop.jpeg 1x, /images/master1-desktop@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 370px, 33.33vw"
+                  />
+
+                  <img src="./images/master1-desktop.jpeg" alt="Барбер стрижет клиента" />
+                </picture>
+
                 <p class="team__overlay">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime placeat
                   distinctio est alias, enim consequuntur unde dolore voluptates. Magnam quam vel,
@@ -260,12 +373,30 @@
             </li>
             <li class="team__item">
               <div class="team__tumth">
-                <img
-                  src="./images/master2.jpeg"
-                  alt="Барбер стрижет клиента"
-                  width="370"
-                  height="346"
-                />
+                <picture>
+                  <source
+                    srcset="./images/master2-mobile.jpeg 1x, /images/master2-mobile@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(max-width: 767px )"
+                    sizes="(max-width: 767px) 418px, 100vw"
+                  />
+
+                  <source
+                    srcset="./images/master2-tablet.jpeg 1x, /images/master2-tablet@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    sizes="(min-width: 768px) 450px, 100vw"
+                  />
+
+                  <source
+                    srcset="./images/master2-desktop.jpeg 1x, /images/master2-desktop@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 370px, 33.33vw"
+                  />
+
+                  <img src="./images/master2-desktop.jpeg" alt="Барбер стрижет клиента" />
+                </picture>
                 <p class="team__overlay">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime placeat
                   distinctio est alias, enim consequuntur unde dolore voluptates. Magnam quam vel,
@@ -306,12 +437,30 @@
             </li>
             <li class="team__item">
               <div class="team__tumth">
-                <img
-                  src="./images/master3.jpeg"
-                  alt="Барбер стрижет клиента"
-                  width="370"
-                  height="346"
-                />
+                <picture>
+                  <source
+                    srcset="./images/master3-mobile.jpeg 1x, /images/master3-mobile@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(max-width: 767px )"
+                    sizes="(max-width: 767px) 418px, 100vw"
+                  />
+
+                  <source
+                    srcset="./images/master3-tablet.jpeg 1x, /images/master3-tablet@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    sizes="(min-width: 768px) 450px, 100vw"
+                  />
+
+                  <source
+                    srcset="./images/master3-desktop.jpeg 1x, /images/master3-desktop@2x.jpeg 2x"
+                    type="image/jpeg"
+                    media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 370px, 33.33vw"
+                  />
+
+                  <img src="./images/master3-desktop.jpeg" alt="Барбер стрижет клиента" />
+                </picture>
                 <p class="team__overlay">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime placeat
                   distinctio est alias, enim consequuntur unde dolore voluptates. Magnam quam vel,
@@ -362,36 +511,104 @@
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="gallery-list list">
             <li class="gallery__item">
-              <img
-                src="./images/gallery1.jpeg"
-                alt="Барбер стрижет клиента"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery1-mobile.jpeg 1x, ./images/gallery1-mobile@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                  sizes="(max-width: 767px) 418px, 100vw"
+                />
+
+                <source
+                  srcset="./images/gallery1-tablet.jpeg 1x, ./images/gallery1-tablet@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) and (max-width: 1199px) 330px, 50vw"
+                />
+
+                <source
+                  srcset="./images/gallery1-desktop.jpeg 1x, ./images/gallery1-desktop@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <img src="./images/gallery1-desktop.jpeg" alt="Барбер стрижет клиента" />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./images/gallery2.jpeg"
-                alt="Барбер стрижет клиента"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery2-mobile.jpeg 1x, ./images/gallery2-mobile@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                  sizes="(max-width: 767px) 418px, 100vw"
+                />
+
+                <source
+                  srcset="./images/gallery2-tablet.jpeg 1x, ./images/gallery2-tablet@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) and (max-width: 1199px) 330px, 50vw"
+                />
+
+                <source
+                  srcset="./images/gallery2-desktop.jpeg 1x, ./images/gallery2-desktop@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <img src="./images/gallery2-desktop.jpeg" alt="Барбер стрижет клиента" />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./images/gallery3.jpeg"
-                alt="Барбер стрижет клиента"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery3-mobile.jpeg 1x, ./images/gallery3-mobile@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                  sizes="(max-width: 767px) 418px, 100vw"
+                />
+
+                <source
+                  srcset="./images/gallery3-tablet.jpeg 1x, ./images/gallery3-tablet@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) and (max-width: 1199px) 330px, 50vw"
+                />
+
+                <source
+                  srcset="./images/gallery3-desktop.jpeg 1x, ./images/gallery3-desktop@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <img src="./images/gallery3-desktop.jpeg" alt="Барбер стрижет клиента" />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./images/gallery4.jpeg"
-                alt="Барбер стрижет клиента"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/gallery4-mobile.jpeg 1x, ./images/gallery4-mobile@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(max-width: 767px)"
+                  sizes="(max-width: 767px) 418px, 100vw"
+                />
+
+                <source
+                  srcset="./images/gallery4-tablet.jpeg 1x, ./images/gallery4-tablet@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) and (max-width: 1199px) 330px, 50vw"
+                />
+
+                <source
+                  srcset="./images/gallery4-desktop.jpeg 1x, ./images/gallery4-desktop@2x.jpeg 2x"
+                  type="image/jpeg"
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <img src="./images/gallery4-desktop.jpeg" alt="Барбер стрижет клиента" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -442,44 +659,48 @@
           </section>
 
           <section class="contacts" id="contacts">
-            <h2 class="contacts__title title title--light" data-aos="fade-left">Контакты</h2>
-            <address class="contacts__address">
-              <ul class="address list">
-                <li class="adress__item">
-                  <a
-                    href="https://goo.gl/maps/tJ6gX38e55JNDVaZ8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="address__link link"
-                  >
-                    <svg class="address__icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-map-pin"></use>
-                    </svg>
-                    ул. Васильковая, <br />
-                    7А Киев, 08132</a
-                  >
-                </li>
-                <li class="adress__item">
-                  <a href="tel:+380441111111" class="address__link link">
-                    <svg class="address__icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-mail"></use>
-                    </svg>
-                    +38 044 111 11 11</a
-                  >
-                </li>
-                <li class="adress__item">
-                  <a href="mailto:barbershop@email.com" class="address__link">
-                    <svg class="address__icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-phone"></use>
-                    </svg>
-                    barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
+            <h2 class="contacts__title title title--light" data-aos="fade-right">Контакты</h2>
 
-            <p class="contacts__subtitle">время работы</p>
-            <p class="contacts__time">Ежедневно с 9:00 до 22:00</p>
+            <div class="contacts__content-wrap">
+              <address class="contacts__address">
+                <ul class="address list">
+                  <li class="adress__item">
+                    <a
+                      href="https://goo.gl/maps/tJ6gX38e55JNDVaZ8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="address__link link"
+                    >
+                      <svg class="address__icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-map-pin"></use>
+                      </svg>
+                      ул. Васильковая, 7А Киев, 08132</a
+                    >
+                  </li>
+                  <li class="adress__item">
+                    <a href="tel:+380441111111" class="address__link link">
+                      <svg class="address__icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="adress__item">
+                    <a href="mailto:barbershop@email.com" class="address__link">
+                      <svg class="address__icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                      barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+
+              <div class="contacts__time-wrap">
+                <p class="contacts__subtitle">время работы</p>
+                <p class="contacts__time">Ежедневно с 9:00 до 22:00</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -502,6 +723,7 @@
         </ul>
       </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
@@ -585,6 +807,8 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

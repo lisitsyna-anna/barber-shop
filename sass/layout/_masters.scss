@@ -1,7 +1,17 @@
 .masters {
-  padding-top: 130px;
-  padding-bottom: 130px;
   background-color: #f7f7f7;
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include desktop {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 .masters__top-text {
   margin-bottom: var(--tipycal-margin);
@@ -13,12 +23,20 @@
 
 .team {
   display: flex;
-  margin-left: -30px;
+  flex-wrap: wrap;
+  gap: 64px;
+
+  @include desktop {
+    gap: 30px;
+  }
 }
 
 .team__item {
-  flex-basis: calc(100% / 3 -30px);
-  margin-left: 30px;
+  width: 100%;
+
+  @include desktop {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .team__tumth {
@@ -37,8 +55,8 @@
 
   background-color: rgba(255, 106, 0, 0.635);
   color: #ffffff;
-  font-size: 16px;
-  line-height: 1.36;
+
+  @include font(16px, null, 1.36);
   letter-spacing: 0.02em;
 
   transition: transform 300ms ease;
@@ -50,9 +68,8 @@
 .team__subtitle {
   margin-top: 30px;
   margin-bottom: 8px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.38;
+
+  @include font(18px, 400, 1.38);
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
@@ -61,8 +78,7 @@
 .team__name {
   margin-bottom: 30px;
 
-  font-size: 14px;
-  line-height: 1.36;
+  @include font(14px, null, 1.36);
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--accent);

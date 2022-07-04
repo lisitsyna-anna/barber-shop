@@ -2,6 +2,14 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+body.modal-open {
+  overflow: hidden;
+
+  & .mobile-menu {
+    transform: translateX(100%);
+  }
+}
+
 .list {
   margin: 0;
   padding-left: 0;

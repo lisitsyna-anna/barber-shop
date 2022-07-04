@@ -4,8 +4,14 @@
   width: 100%;
   height: 100%;
   background-color: rgba(48, 48, 48, 0.551);
+  overflow-y: scroll;
+  opacity: 1;
 
   transition: opacity 300ms ease, visibility 300ms ease;
+
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px 94px 15px;
+  }
 }
 
 .is-hidden {
@@ -15,18 +21,32 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 500px;
-  min-height: 600px;
   padding: 40px;
-
   background-color: #fff;
   border-radius: 5px;
+  overflow-y: auto;
 
-  transition: transform 300ms ease;
+  @media screen and (max-width: 767px) {
+    position: relative;
+    opacity: 1;
+    transition: opacity 250ms ease;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 450px;
+    height: 609px;
+
+    transition: transform 250ms ease;
+  }
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
@@ -37,9 +57,9 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  @include centered-flex();
+
   width: 30px;
   height: 30px;
   padding: 0;
@@ -48,7 +68,8 @@
   border-radius: 50%;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .modal__close-icon {
       fill: var(--accent);
     }
@@ -57,12 +78,18 @@
 
 .no-scroll {
   overflow: hidden;
+
+  @include tablet {
+    & .mobile-menu {
+      transform: translateX(100%);
+    }
+  }
 }
 
 .modal__title {
   text-align: center;
-  font-size: 16px;
-  font-weight: 600;
+
+  @include font(16px, 600, 1.16);
   margin-bottom: 15px;
 }
 
@@ -149,6 +176,7 @@
     content: '';
     width: 16px;
     height: 15px;
+    flex-shrink: 0;
     border: 2px solid #090b13;
     border-radius: 3px;
     margin-right: 7px;
@@ -171,4 +199,5 @@
   margin-right: auto;
   margin-left: auto;
   display: block;
+  color: var(--second-color-btn);
 }

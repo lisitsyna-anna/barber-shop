@@ -1,26 +1,70 @@
 .contact-wrap {
   background-color: #191c26;
-  background-image: url(../images/contacts-bg.png);
+  background-image: url(../images/contacts-bg-mobile.png);
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: calc(50% - 15px);
+  background-position: bottom;
+  background-size: 100% calc(50% - 32px);
   max-width: 1280px;
   margin: 0 auto;
+
+  @include retina {
+    background-image: url(../images/contacts-bg-mobile@2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../images/contacts-bg-tablet.png);
+    background-size: 100% calc(50% - 53px);
+
+    @include retina {
+      background-image: url(../images/contacts-bg-tablet@2x.png);
+    }
+  }
+
+  @include desktop {
+    background-size: calc(50% - 15px);
+    background-position: right;
+    background-image: url(../images/contacts-bg-desktop.png);
+
+    @include retina {
+      background-image: url(../images/contacts-bg-desktop@2x.png);
+    }
+  }
 }
 
 .contact-wrap__container {
   display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .online {
-  width: calc(50% + 15px);
-  padding-top: 130px;
-  padding-bottom: 130px;
-  padding-right: 40px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include desktop {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    width: calc(50% + 15px);
+    height: auto;
+    padding-right: 40px;
+  }
 }
 
 .online__title {
   margin-bottom: 44px;
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .online-form {
@@ -31,7 +75,17 @@
 
 .online-form__field {
   position: relative;
-  width: 265px;
+  width: 100%;
+  margin-bottom: 44px;
+
+  @include tablet {
+    width: 330px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    width: 265px;
+  }
 }
 
 .online-form__input {
@@ -54,9 +108,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  @include font(11px, 600, 1.36);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4);
@@ -75,8 +127,12 @@
 .online-form__field--last {
   position: relative;
   width: 100%;
-  margin-top: 44px;
+
   margin-bottom: 44px;
+
+  @include tablet {
+    margin-top: 44px;
+  }
 }
 
 .online-form__comment {
@@ -97,7 +153,14 @@
 }
 
 .online-form__btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   color: #ffffff;
+
+  @include tablet {
+    margin-left: 0;
+  }
 }
 
 textarea::-webkit-scrollbar {

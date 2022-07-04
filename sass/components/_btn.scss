@@ -3,9 +3,7 @@
   height: 40px;
 
   font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
+  @include font(12px, 600, 1.33);
   letter-spacing: 0.09em;
   text-transform: uppercase;
 

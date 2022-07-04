@@ -1,6 +1,5 @@
 .bottom-text {
-  font-size: 18px;
-  line-height: 1.67;
+  @include font(16px, null, 1.62);
   letter-spacing: 0.02em;
 
   &--light {
@@ -8,5 +7,9 @@
   }
   &--dark {
     color: #555555;
+  }
+
+  @include desktop {
+    @include font(18px, null, 1.67);
   }
 }

@@ -19,6 +19,11 @@ to book appointments online for added convenience.
 - Online Booking: Easily book appointments online. Select your preferred date, time, and barber to
   schedule your visit.
 
+- Responsive Design: This website is designed with responsiveness in mind. It adapts to different
+  screen sizes, ensuring a great user experience whether you're accessing it from a mobile device,
+  tablet, or desktop computer. The mobile-first approach was used, prioritizing usability on smaller
+  screens and enhancing it for larger ones.
+
 ## Technologies Used
 
 This website was built using the following technologies:
